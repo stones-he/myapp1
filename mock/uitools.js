@@ -167,5 +167,10 @@ function fakeFetchData(req, res) {
 export default {
   'GET /uitools/list': fakeFetchData,
   // 'GET /uitoolsList': fakeData,
-  '/uitools/oper': {}
+  '/uitools/oper': {},
+  // eslint-disable-next-line func-names
+  'POST /form/post': (req, res) => {
+    console.log("form data:%s", req.body);
+    return res.json({"form":"ok"});
+  }
 };

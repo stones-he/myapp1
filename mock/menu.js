@@ -44,6 +44,12 @@ export default {
         path: '/listsearchprojects',
         component: './ListSearchProjects',
       },
+      {
+        name: 'Form',
+        icon: 'smile',
+        path: '/formpage',
+        component: './formpage',
+      },
       // {
       //   path: '/',
       //   redirect: '/welcome',

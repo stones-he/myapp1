@@ -32,12 +32,14 @@ const plugins = [
         webpackChunkName: true,
         level: 3,
       },
-      pwa: pwa ? {
-        workboxPluginMode: 'InjectManifest',
-        workboxOptions: {
-          importWorkboxFrom: 'local',
-        },
-      } : false, // default close dll, because issue https://github.com/ant-design/ant-design-pro/issues/4665
+      pwa: pwa ?
+        {
+          workboxPluginMode: 'InjectManifest',
+          workboxOptions: {
+            importWorkboxFrom: 'local',
+          },
+        } :
+        false, // default close dll, because issue https://github.com/ant-design/ant-design-pro/issues/4665
       // dll features https://webpack.js.org/plugins/dll-plugin/
       // dll: {
       //   include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch'],
@@ -126,11 +128,18 @@ export default {
               icon: 'smile',
               path: '/listtablelist',
               component: './ListTableList',
-            }, {
+            },
+            {
               name: 'UIToolsList',
               icon: 'profile',
               path: '/uitoolsList*',
               component: './uitools',
+            },
+            {
+              name: '空白页面',
+              icon: 'smile',
+              path: '/formpage',
+              component: './formpage',
             },
             {
               component: './404',
